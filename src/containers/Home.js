@@ -11,6 +11,7 @@ class Home extends Component {
   }
 
   render() {
+    const url = `https://accounts.spotify.com/authorize?client_id=${process.env.SPOTIFY_CLIENT_ID}&scope=user-read-email%20user-top-read&response_type=token&redirect_uri=http://localhost:1234/callback`;
     return (
       <div id="home">
         <div className="content">
@@ -20,9 +21,9 @@ class Home extends Component {
           <div className="nav_items">
             <ul>
               <li>
-                <Link to="/spotify">
+                <a href={ url }>
                   <img src={ spotifyLogo } alt="Spotify" />
-                </Link>
+                </a>
               </li>
               <li>
                 <Link to="/giphy">

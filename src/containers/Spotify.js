@@ -1,15 +1,24 @@
 import React, { Component } from 'react';
+import ArtistInfo from '../components/ArtistInfo';
+import RelatedArtists from '../components/RelatedArtists';
 
 class Spotify extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      artists: {
+        
+      },
+    };
   }
 
   render() {
     return (
-      <h1>Spotify</h1>
-    )
+      <div id="spotify">
+        <ArtistInfo />
+        <RelatedArtists />
+      </div>
+    );
   }
 }
 
