@@ -24,6 +24,8 @@
   },
   "homepage": "https://github.com/iamuchejude/frontend-test-II#readme",
   "dependencies": {
+    "dotenv": "^6.1.0",
+    "fs": "0.0.1-security",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-router-dom": "^4.3.1"
