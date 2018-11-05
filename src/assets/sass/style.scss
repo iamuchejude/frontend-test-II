@@ -1,0 +1,209 @@
+@import '_mixins';
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+  overflow-y: hidden;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  
+  body, html {
+    width: 100vw;
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    #home {
+      width: 100vw;
+      height: 100vh;
+      @include backgroundImage(0deg, rgba(225, 225, 225, 0.2), rgba(0, 0, 0, 0.01), '../images/background.jpg');
+      position: fixed;
+      overflow: none;
+      
+      .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 350px;
+        text-align: center;
+
+        @media only screen and (max-width: 350px) {
+          width: 100%;
+        }
+
+        .intro {
+          padding: 20px;
+          font-size: 1.1em;
+        }
+
+        .nav_items {
+          ul {
+            li {
+              display: inline-block;
+              margin: 0 10px;
+
+              &:hover {
+                @include boxShadow(0px 3px 6px 0px rgba(129, 124, 124, 0.103));
+              }
+
+              img {
+                width: 100px;
+                height: 100px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #giphy {
+      border: 1px solid #eee;
+      width: 350px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 80vh;
+
+      @media only screen and (max-width: 351px) {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .chat_header {
+        border-bottom: 1px solid #eee;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        background: #eee;
+      }
+
+      .chat_contents {
+        padding: 10px;
+        height: 78%;
+        margin-bottom: 40px;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          width: 10px;
+          background: rgb(245, 242, 242);
+          border: 1px solid #eee;
+          border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: #ccc;
+          width: 100%;
+          border-radius: 10px;
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+
+        .message {
+          padding: 5px;
+          margin: 0;
+          width: 100%;
+          text-align: center;
+        }
+
+        .singleChat {
+          float: right;
+          width: 95%;
+          padding: 10px;
+          display: inline-grid;
+          grid-template-columns: 85% 10%;
+
+          .gifImage {
+            border: 1px solid rgb(248, 248, 248);
+            background: rgb(248, 248, 248);
+            padding: 5px;
+            border-radius: 10px;
+            margin-left: 2px;
+          }
+
+          img {
+            width: 100% !important;
+          }
+
+          .userImage {
+            width: 40px;
+            border: 1px solid #eee;
+            border-radius: 50%;
+            height: 40px;
+            margin: 0 0 0 5px;
+
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+
+      .chat_control {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid #eee;
+        padding: 5px;
+
+        * {
+          transition: .3s ease-in-out;
+        }
+
+        .form_message {
+          font-size: x-small;
+          color: firebrick;
+          padding: 0 10px;
+        }
+
+        form {
+          width: 100%;
+
+          input {
+            width: 100%;
+            border: 1px solid #ccc;
+            padding: 5px 85px 5px 20px;
+            border-radius: 40px;
+            height: 45px;
+
+            &:read-only {
+              cursor: not-allowed;
+            }
+          }
+
+          button {
+            position: absolute;
+            top: 11px;
+            right: 15px;
+            padding: 5px 15px;
+            border: 1px solid #eee;
+            border-radius: 40px;
+            cursor: pointer;
+            max-width: 65px;
+            width: 65px;
+
+            &:disabled {
+              cursor: not-allowed;
+            }
+          }
+        }
+      }
+    }
+  }
+}
