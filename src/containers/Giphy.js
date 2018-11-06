@@ -36,7 +36,7 @@ class Giphy extends Component {
         return this.setState({ message: 'Gif was not found', loading: false, gif: '' });
       } else {
         const gifData = data.data[0].images.fixed_width_small.url;
-        this.state.giphy.push(gifData);
+        this.setState({ giphy: [...this.state.giphy, gifData]});
         this.setState({ loading: false, message: '', gif: '' });
       }
     })
