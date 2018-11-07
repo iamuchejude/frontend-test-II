@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App components should render app 1`] = `
+<div
+  id="home"
+>
+  <div
+    className="content"
+  >
+    <div
+      className="intro"
+    >
+      <p>
+        Welcome, kindly click on any of the icons to navigate
+      </p>
+    </div>
+    <div
+      className="nav_items"
+    >
+      <ul>
+        <li>
+          <a
+            href="https://accounts.spotify.com/authorize?client_id=undefined&scope=user-read-email%20user-top-read&response_type=token&redirect_uri=http://localhost:1234/callback"
+          >
+            <img
+              alt="Spotify"
+              src={Object {}}
+            />
+          </a>
+        </li>
+        <li>
+          <Link
+            replace={false}
+            to="/giphy"
+          >
+            <img
+              alt="Giphy"
+              src={Object {}}
+            />
+          </Link>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

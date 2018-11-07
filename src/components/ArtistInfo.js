@@ -4,8 +4,8 @@ class ArtistInfo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      artist: '',
-    };
+      artist: null,
+    }
   }
 
   componentDidMount() {
@@ -23,23 +23,21 @@ class ArtistInfo extends Component {
   }
 
   render() {
-    
-    const { followers, genres, images, name, popularity, type } = this.state.artist;
     return (
       <Fragment>
         { 
           !this.state.artist ? 'loading.....' :
           <div className="info">
             <div className="photo">
-             <img src={ images[0].url } alt={ name } />
+             <img src={ this.state.images[0].url } alt={ this.state.name } />
             </div>
             <div className="profile">
               <ul>
-                <li className="name"> { name } </li>
-                <li className="followers"><i className="fa fa-user" /> { followers.total } Followers </li>
+                <li className="name"> { this.state.name } </li>
+                <li className="followers"><i className="fa fa-user" /> { this.state.followers.total } Followers </li>
                 <li className="genres">
                   {
-                    genres.map(genre => <span>{ genre }</span>)
+                    this.state.genres.map(genre => <span>{ genre }</span>)
                   }
                 </li>
               </ul>

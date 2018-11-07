@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "parcel ./public/index.html --no-cache",
-    "build": "parcel build ./public/index.html --no-cache"
+    "build": "parcel build ./public/index.html --no-cache",
+    "test": "jest --config=./jest.config.json"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,8 @@
   "dependencies": {
     "dotenv": "^6.1.0",
     "fs": "0.0.1-security",
+    "jest": "^23.6.0",
+    "prop-types": "^15.6.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-router-dom": "^4.3.1"
@@ -36,6 +39,10 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "enzyme-to-json": "^3.3.4",
+    "jest-fetch-mock": "^1.6.6",
     "node-sass": "^4.10.0",
     "parcel-bundler": "^1.10.3",
     "sass": "^1.14.3"
