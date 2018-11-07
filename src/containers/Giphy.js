@@ -36,8 +36,7 @@ class Giphy extends Component {
         return this.setState({ message: 'Gif was not found', loading: false, gif: '' });
       } else {
         const gifData = data.data[0].images.fixed_width_small.url;
-        this.setState({ giphy: [...this.state.giphy, gifData]});
-        this.setState({ loading: false, message: '', gif: '' });
+        return this.setState({ giphy: [...this.state.giphy, gifData], loading: false, message: '', gif: ''});
       }
     })
     .catch(() =>  this.setState({ message: 'Oops! Server error occured. Please try again later.', loading: false, gif: '' }));
