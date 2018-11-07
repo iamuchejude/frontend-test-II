@@ -16,14 +16,11 @@ class RelatedArtists extends Component {
         'Authorization': `Bearer ${token}`
       }
     }).then(res => res.json())
-    // .then(data => console.log(data.artists))
-    .then(data => this.setState({ artists: data.artists.splice(0, 10) }))
+    .then(data => { this.setState({ artists: data.artists.splice(0, 10) }); console.log(data.artists.splice(0, 10)) })
     .catch(err => console.log(err));
   }
 
   render() {
-    const { followers, genres, images, name, popularity, type } = this.state;
-  
     return (
       <div className="related_artists">
         <div className="header"> Related Artists </div>

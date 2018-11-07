@@ -26,6 +26,15 @@ If you choose to use build tools to compile your CSS and Javascript (such as SAS
 
 This fictitious project is part of a larger plan to reuse templates for multiple properties. When authoring your CSS ensure that it is easy for another developer to find and change things such as fonts and colours.
 
+## Technologies used
+React, SASS, Parcel-bundler
+
+## How to run app locally
+* Clone the repository
+* cd into the clone repo folder
+* Run `npm install`
+* Run `npm start`
+App will be available via `http://localhost:1234`
 
 ## Good luck!
 

@@ -74,6 +74,11 @@
         width: 99vw;
       }
 
+      @media only screen and (max-width: 500px) {
+        margin: 0 auto;
+        padding: 10px;
+      }
+
       img {
         width: 100%;
       }
@@ -85,6 +90,12 @@
         @include boxShadow(0px 3px 6px 0px rgba(129, 124, 124, 0.103));
         max-height: 75vh;
         overflow-y: auto;
+
+        @media only screen and (max-width: 500px) {
+          padding: 10px 5px;
+          border: none;
+          box-shadow: 0;
+        }
 
         &::-webkit-scrollbar {
           width: 10px;
@@ -101,7 +112,7 @@
 
         .header {
           font-weight: bold;
-          font-size: 1.5em;
+          font-size: 1.3em;
         }
 
         * {
