@@ -3,3 +3,4 @@ dist/
 .cached/
 .env
 package-lock.json
+coverage

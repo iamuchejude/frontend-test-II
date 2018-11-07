@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArtistInfo components should render Artist info 1`] = `
+<Fragment>
+  loading.....
+</Fragment>
+`;

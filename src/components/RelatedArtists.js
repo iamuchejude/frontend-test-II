@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropType from 'prop-types';
 
 class RelatedArtists extends Component {
   constructor(props) {
