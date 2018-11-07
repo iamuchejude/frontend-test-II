@@ -5,7 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "parcel ./public/index.html --no-cache",
-    "build": "parcel build ./public/index.html --no-cache"
+    "build": "parcel build ./public/index.html --no-cache",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -22,10 +24,11 @@
   "bugs": {
     "url": "https://github.com/iamuchejude/frontend-test-II/issues"
   },
-  "homepage": "https://github.com/iamuchejude/frontend-test-II#readme",
+  "homepage": "https://github.com/iamuchejude/frontend-test-II",
   "dependencies": {
     "dotenv": "^6.1.0",
     "fs": "0.0.1-security",
+    "gh-pages": "^2.0.1",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-router-dom": "^4.3.1"
